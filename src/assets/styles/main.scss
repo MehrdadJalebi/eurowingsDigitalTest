@@ -1,0 +1,28 @@
+@import 'variables';
+
+body {
+  margin: 0;
+  background-color: $mainBackground;
+}
+
+header {
+  background-color: $headerBackground;
+  padding: 1.5rem 2rem;
+  img {
+    max-width: 15vw;
+    min-width: 200px;
+  }
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: $mainTextColor;
+}
+
+header {
+  font-size: 1.5rem;
+}
+
