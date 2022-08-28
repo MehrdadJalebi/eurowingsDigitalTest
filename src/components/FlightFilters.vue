@@ -1,7 +1,7 @@
 <template>
-  <header>
-    <img alt="Eurowings logo" src="../assets/images/logo.png" />
-  </header>
+  <div class="filters">
+    <input type="text" />
+  </div>
 </template>
 
 <script>

@@ -20,6 +20,14 @@ header {
   }
 }
 
+.filters {
+  box-shadow: 0 5px 15px 0 rgb(0 0 0 / 25%);
+  border-radius: 8px;
+  background-color: $filtersBackground;
+  margin: 1rem 6rem;
+  padding: 1.5rem;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -32,3 +40,6 @@ header {
   font-size: 1.5rem;
 }
 
+input {
+  line-height: 1.15;
+}
