@@ -1,8 +1,13 @@
+var flights = require("./data.json");
 var express = require("express");
+var cors = require("cors");
+
 var app = express();
-app.get("/url", (req, res, next) => {
- res.json(["Tony","Lisa","Michael","Ginger","Food"]);
+app.use(cors());
+
+app.get("/flights", (req, res) => {
+  res.json(flights);
 });
 app.listen(3000, () => {
- console.log("Server running on port 3000");
+  console.log("Server running on port 3000");
 });
