@@ -1,11 +1,19 @@
 <template>
-  <header>
-    <img alt="Eurowings logo" src="../assets/images/logo.png" />
-  </header>
+  <flight-info v-for="(flight, index) in flightsList" :key="index" :info="flight" />
 </template>
 
 <script>
+import FlightInfo from "@/components/FlightInfo.vue";
 export default {
   name: "FlightsList",
+  components: {
+    FlightInfo,
+  },
+  props: {
+    flightsList: {
+      type: Array,
+      default: () => [],
+    },
+  },
 };
 </script>

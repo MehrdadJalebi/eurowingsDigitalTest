@@ -19,7 +19,7 @@ export default createStore({
   actions: {
     getFlights(context) {
       return axios.get(FlightsUrl()).then((response) => {
-        context.commit("setFlights", response.data);
+        context.commit("setFlights", response.data.data);
       });
     },
   },

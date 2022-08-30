@@ -5,8 +5,10 @@
       src="../assets/images/mainPageImage.jpeg"
       alt="main page image"
     />
-    <FlightFilters />
-    <FlightsList :items="filteredFlights" />
+    <div class="container">
+      <FlightFilters />
+      <FlightsList :flights-list="filteredFlights" />
+    </div>
   </div>
 </template>
 
@@ -30,10 +32,10 @@ export default {
       filteredFlights: [],
     };
   },
-  created() {
-    this.getFlights().then(() => {
-      this.filteredFlights = this.flights;
-    });
+  async created() {
+    await this.getFlights()
+    this.filteredFlights = this.flights;
+    console.log(this.filteredFlights)
   },
   methods: {
     ...mapActions({
