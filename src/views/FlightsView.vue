@@ -33,9 +33,9 @@ export default {
     };
   },
   async created() {
-    await this.getFlights()
+    await this.getFlights();
     this.filteredFlights = this.flights;
-    console.log(this.filteredFlights)
+    console.log(this.filteredFlights);
   },
   methods: {
     ...mapActions({

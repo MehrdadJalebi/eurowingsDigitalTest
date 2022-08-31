@@ -31,11 +31,13 @@ header {
   background-color: $flightBackground;
   display: flex;
   flex-basis: 0;
-  flex-direction: column;
   flex-grow: 1;
   border-radius: 8px;
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 25%);
   overflow: hidden;
+  margin: 10px 0;
+  cursor: pointer;
+  justify-content: space-between;
   &:hover {
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 50%);
   }
@@ -49,6 +51,38 @@ header {
   padding: 1.5rem;
 }
 
+.left-section, .right-section {
+  display: flex;
+}
+
+.airports {
+  display: flex;
+}
+
+.origin-airport {
+  display: flex;
+}
+
+.destination-airport {
+  display: flex;
+}
+.flight-dates {
+  display: flex;
+  margin-left: 40px;
+}
+.origin-date {
+  display: flex;
+}
+.destination-date {
+  display: flex;
+}
+.seats {
+  display: flex;
+  margin-right: 40px;
+}
+.price-info {
+  display: flex;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

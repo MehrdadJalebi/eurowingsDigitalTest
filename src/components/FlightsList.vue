@@ -1,5 +1,9 @@
 <template>
-  <flight-info v-for="(flight, index) in flightsList" :key="index" :info="flight" />
+  <flight-info
+    v-for="(flight, index) in flightsList"
+    :key="index"
+    :info="flight"
+  />
 </template>
 
 <script>
