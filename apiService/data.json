@@ -5,7 +5,7 @@
       "destination":"YVO",
       "departureDate":"2022-11-18T20:03:00",
       "returnDate":"2023-06-19T00:41:00",
-      "seatAvailability":40,
+      "seatAvailability":7,
       "price":{
         "amount":458.69,
         "currency":"EUR"
@@ -29,7 +29,7 @@
       "destination":"GSE",
       "departureDate":"2022-12-05T00:03:00",
       "returnDate":"2022-12-05T08:34:00",
-      "seatAvailability":80,
+      "seatAvailability":5,
       "price":{
         "amount":958.41,
         "currency":"EUR"
@@ -65,7 +65,7 @@
       "destination":"GHA",
       "departureDate":"2022-11-10T05:21:00",
       "returnDate":"2022-11-14T18:30:00",
-      "seatAvailability":80,
+      "seatAvailability":1,
       "price":{
         "amount":323.74,
         "currency":"EUR"

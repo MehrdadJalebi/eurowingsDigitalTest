@@ -38,6 +38,7 @@ header {
   margin: 10px 0;
   cursor: pointer;
   justify-content: space-between;
+  align-items: center;
   &:hover {
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 50%);
   }
@@ -59,29 +60,56 @@ header {
   display: flex;
 }
 
-.origin-airport {
+.origin-date,
+.destination-date,
+.origin-airport,
+.destination-airport {
   display: flex;
+  flex-flow: column;
+  text-align: left;
+}
+
+.bold-15 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.bold-17 {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.origin-airport {
 }
 
 .destination-airport {
-  display: flex;
+  margin-left: 30px;
 }
 .flight-dates {
   display: flex;
-  margin-left: 40px;
+  margin-left: 80px;
 }
 .origin-date {
-  display: flex;
 }
 .destination-date {
-  display: flex;
+  margin-left: 30px;
 }
 .seats {
   display: flex;
+  flex-flow: column;
   margin-right: 40px;
+  align-items: left;
+  justify-content: center;
+  text-align: right;
+  &.low-available {
+    color: $seats;
+  }
 }
-.price-info {
-  display: flex;
+
+
+.price {
+  color: $priceColor;
+  min-width: 170px;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
