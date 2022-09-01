@@ -1,5 +1,12 @@
 # eurowings-digital
 
+## backend local api 
+```
+cd apiService
+npm install
+node index.js
+```
+
 ## Project setup
 ```
 npm install
