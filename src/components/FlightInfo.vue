@@ -26,9 +26,8 @@
       <div class="seats low-available" v-if="flightInfo.seatAvailability < 10">
         Only {{ flightInfo.seatAvailability }} seats left
       </div>
-      <div class="seats d-none d-lg-block" v-else>
-        <span>Seat Availability</span>
-        <span>{{ flightInfo.seatAvailability }}</span>
+      <div class="seats" v-else>
+        <span>Seat Availability: {{ flightInfo.seatAvailability }}</span>
       </div>
       <div class="price bold-17">
         {{ flightInfo.price.amount + " " + flightInfo.price.currency }}
