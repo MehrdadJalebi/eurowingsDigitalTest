@@ -39,7 +39,7 @@
         >
         </Datepicker>
       </div>
-      <div class="col-md-4 col-12">
+      <div class="col-lg-4 col-md-3 col-12">
         <v-select
           class="mb-2"
           v-model="offerType"
@@ -50,7 +50,7 @@
         >
         </v-select>
       </div>
-      <div class="col-md-2 col-12 d-flex flex-row">
+      <div class="col-lg-2 col-md-3 col-12 d-flex flex-row">
         <button class="tertiary" @click="onClear">clear</button>
         <button class="secondary" @click="onFilter">Search</button>
       </div>
