@@ -4,15 +4,19 @@
       <div class="col-md-6 col-12">
         <v-select
           class="mb-2"
-          :options="['Canada', 'United States']"
-          :clearable="false">
+          placeholder="Departure Airport"
+          :options="origins"
+          :clearable="false"
+        >
         </v-select>
       </div>
       <div class="col-md-6 col-12">
         <v-select
           class="mb-2"
-          :options="['Canada', 'United States']"
-          :clearable="false">
+          placeholder="Destination Airport"
+          :options="destinations"
+          :clearable="false"
+        >
         </v-select>
       </div>
     </div>
@@ -34,17 +38,18 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import VSelect from "vue-select";
 export default {
   name: "FlightFilters",
   components: {
     VSelect,
   },
-  data() {
-    return {
-      value: null,
-      options: ["list", "of", "options"],
-    };
+  computed: {
+    ...mapGetters({
+      origins: "origins",
+      destinations: "destinations",
+    }),
   },
 };
 </script>

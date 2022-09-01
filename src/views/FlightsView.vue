@@ -35,7 +35,6 @@ export default {
   async created() {
     await this.getFlights();
     this.filteredFlights = this.flights;
-    console.log(this.filteredFlights);
   },
   methods: {
     ...mapActions({
