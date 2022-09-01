@@ -148,6 +148,12 @@ button {
   color: $primary;
   font-size: 1rem;
   font-weight: bold;
+  &.secondary {
+    background-color: $secondary;
+  }
+  &.tertiary {
+    background-color: $tertiary;
+  }
 }
 
 

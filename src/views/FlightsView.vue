@@ -6,7 +6,7 @@
       alt="main page image"
     />
     <div class="container">
-      <FlightFilters />
+      <FlightFilters :items="flights" @filter="filter" />
       <FlightsList :flights-list="filteredFlights" />
     </div>
   </div>
@@ -40,6 +40,9 @@ export default {
     ...mapActions({
       getFlights: "getFlights",
     }),
+    filter(val) {
+      this.filteredFlights = val;
+    },
   },
 };
 </script>
