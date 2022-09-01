@@ -1,6 +1,6 @@
 <template>
   <header>
-    <img alt="Eurowings logo" src="../assets/images/logo.png" />
+    <img id="header" alt="Eurowings logo" src="../assets/images/logo.png" />
   </header>
 </template>
 

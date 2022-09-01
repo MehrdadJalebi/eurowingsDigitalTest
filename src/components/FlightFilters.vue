@@ -3,6 +3,7 @@
     <div class="row">
       <div class="col-md-6 col-12">
         <v-select
+          id="departure-airport"
           class="mb-2"
           v-model="departureAirport"
           placeholder="Departure Airport"
@@ -51,7 +52,9 @@
       </div>
       <div class="col-lg-2 col-md-3 col-12 d-flex flex-row">
         <button class="tertiary" @click="onClear">clear</button>
-        <button class="secondary" @click="onFilter">Search</button>
+        <button id="filter-btn" class="secondary" @click="onFilter">
+          Search
+        </button>
       </div>
     </div>
   </div>

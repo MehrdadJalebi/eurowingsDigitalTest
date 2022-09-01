@@ -54,11 +54,7 @@ header {
   padding: 1.5rem;
 }
 
-.left-section, .right-section {
-  display: flex;
-}
-
-.airports {
+.airports, .left-section, .right-section {
   display: flex;
 }
 
@@ -88,8 +84,7 @@ header {
   display: flex;
   margin-left: 80px;
 }
-.origin-date {
-}
+
 .destination-date {
   margin-left: 30px;
 }
