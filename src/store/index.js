@@ -8,22 +8,10 @@ export default createStore({
     origins: [],
     destinations: [],
     services: [
-      {
-        value: "amadeusExactMatch",
-        name: "ExactMatch",
-      },
-      {
-        value: "amadeusOptimizedPrice",
-        name: "OptimizedPrice",
-      },
-      {
-        value: "amadeusBestPrice",
-        name: "BestPrice",
-      },
-      {
-        value: "amadeusOptimizedBestPrice",
-        name: "OptimizedBestPrice",
-      },
+      "ExactMatch",
+      "OptimizedPrice",
+      "BestPrice",
+      "OptimizedBestPrice",
     ],
   },
   getters: {
@@ -54,7 +42,7 @@ export default createStore({
   actions: {
     getFlights(context) {
       return axios.get(FlightsUrl()).then((response) => {
-        const flights = response.data.data;
+        const flights = response.data;
         context.commit("setFlights", flights);
         let origins = [];
         let destinations = [];

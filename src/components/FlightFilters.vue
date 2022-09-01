@@ -46,7 +46,6 @@
           placeholder="Offer Type"
           :options="services"
           :clearable="false"
-          label="name"
         >
         </v-select>
       </div>
@@ -85,7 +84,8 @@ export default {
         this.departureAirport ||
         this.destinationAirport ||
         this.departureDate ||
-        this.destinationDate
+        this.destinationDate ||
+        this.offerType
       );
     },
   },
@@ -105,6 +105,7 @@ export default {
       let destinationAirportArray = [];
       let departureDateArray = [];
       let destinationDateArray = [];
+      let offerTypeArray = [];
       this.items.forEach((item) => {
         if (this.departureAirport && item.origin === this.departureAirport) {
           departureAirportArray.push(item);
@@ -129,6 +130,9 @@ export default {
         ) {
           destinationDateArray.push(item);
         }
+        if (this.offerType && item.offerType === this.offerType) {
+          offerTypeArray.push(item);
+        }
       });
       let resultArrays = [];
       if (departureAirportArray.length > 0) {
@@ -143,11 +147,15 @@ export default {
       if (destinationDateArray.length > 0) {
         resultArrays.push(destinationDateArray);
       }
+      if (offerTypeArray.length > 0) {
+        resultArrays.push(offerTypeArray);
+      }
       const filterItems = {
         departureAirport: this.departureAirport,
         destinationAirport: this.destinationAirport,
         departureDate: this.departureDate,
         destinationDate: this.destinationDate,
+        offerType: this.offerType,
       };
       const filteredFillItems = Object.values(filterItems).filter((e) => {
         return e !== null;
@@ -171,6 +179,7 @@ export default {
       this.destinationAirport = null;
       this.departureDate = null;
       this.destinationDate = null;
+      this.offerType = null;
       this.filterItems = this.items;
       this.$emit("filter", this.filterItems);
     },

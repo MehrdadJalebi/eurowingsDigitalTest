@@ -1,4 +1,7 @@
 <template>
+  <div class="offer-type-md d-lg-none d-block">
+    <span>{{ flightInfo.offerType }}</span>
+  </div>
   <div class="flight-info">
     <div class="left-section">
       <div class="airports">
@@ -23,10 +26,14 @@
       </div>
     </div>
     <div class="right-section">
-      <div class="seats low-available" v-if="flightInfo.seatAvailability < 10">
-        Only {{ flightInfo.seatAvailability }} seats left
+      <div class="seats" v-if="flightInfo.seatAvailability < 10">
+        <span class="offer-type">{{ flightInfo.offerType }}</span>
+        <span class="low-available">
+          Only {{ flightInfo.seatAvailability }} seats left
+        </span>
       </div>
       <div class="seats" v-else>
+        <span class="offer-type">{{ flightInfo.offerType }}</span>
         <span>Seat Availability: {{ flightInfo.seatAvailability }}</span>
       </div>
       <div class="price bold-17">

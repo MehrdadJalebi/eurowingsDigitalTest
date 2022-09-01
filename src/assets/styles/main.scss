@@ -81,9 +81,6 @@ header {
   font-weight: bold;
 }
 
-.origin-airport {
-}
-
 .destination-airport {
   margin-left: 30px;
 }
@@ -101,9 +98,13 @@ header {
   flex-flow: column;
   margin-right: 40px;
   align-items: left;
+  text-align: right;
   justify-content: center;
-  &.low-available {
+  .low-available {
     color: $seats;
+  }
+  .offer-type {
+    color: $tertiary;
   }
 }
 
@@ -193,8 +194,9 @@ button {
     align-items: center;
   }
   .flight-info {
-    border-radius: 8px 8px 0 0;
+    border-radius: 0;
     margin-bottom: 0;
+    margin-top: 0;
   }
   .seats-md {
     background-color: $seats;
@@ -202,8 +204,16 @@ button {
     color: $primary;
     border-radius: 0 0 8px 8px;
     font-size: 0.85rem;
+    margin-bottom: 15px;
   }
-  .seats {
+  .offer-type-md {
+    background-color: $tertiary;
+    padding: 3px 0;
+    color: $primary;
+    border-radius: 8px 8px 0 0;
+    font-size: 0.85rem;
+  }
+  .seats, .offer-type {
     display: none;
   }
 }
