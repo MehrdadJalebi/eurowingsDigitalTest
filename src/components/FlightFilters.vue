@@ -22,13 +22,30 @@
     </div>
     <div class="row">
       <div class="col-md-3 col-12">
-        <input type="text" />
+        <Datepicker
+          placeholder="Outgoing Flight"
+          :enableTimePicker="false"
+          v-model="date"
+        >
+        </Datepicker>
       </div>
       <div class="col-md-3 col-12">
-        <input type="text" />
+        <Datepicker
+          placeholder="Return Flight"
+          :enableTimePicker="false"
+          v-model="date"
+        >
+        </Datepicker>
       </div>
       <div class="col-md-3 col-12">
-        <input type="text" />
+        <v-select
+          class="mb-2"
+          placeholder="Offer Type"
+          :options="services"
+          :clearable="false"
+          label="name"
+        >
+        </v-select>
       </div>
       <div class="col-md-3 col-12">
         <button>Search for flight</button>
@@ -40,16 +57,24 @@
 <script>
 import { mapGetters } from "vuex";
 import VSelect from "vue-select";
+import Datepicker from '@vuepic/vue-datepicker';
 export default {
   name: "FlightFilters",
   components: {
     VSelect,
+    Datepicker,
   },
   computed: {
     ...mapGetters({
       origins: "origins",
       destinations: "destinations",
+      services: "services",
     }),
   },
+  data() {
+    return {
+      date: null,
+    };
+  }
 };
 </script>

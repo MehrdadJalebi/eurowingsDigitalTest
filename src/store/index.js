@@ -7,6 +7,24 @@ export default createStore({
     flights: [],
     origins: [],
     destinations: [],
+    services: [
+      {
+        value: "amadeusExactMatch",
+        name: "ExactMatch",
+      },
+      {
+        value: "amadeusOptimizedPrice",
+        name: "OptimizedPrice",
+      },
+      {
+        value: "amadeusBestPrice",
+        name: "BestPrice",
+      },
+      {
+        value: "amadeusOptimizedBestPrice",
+        name: "OptimizedBestPrice",
+      },
+    ],
   },
   getters: {
     flights(state) {
@@ -17,6 +35,9 @@ export default createStore({
     },
     destinations(state) {
       return state.destinations;
+    },
+    services(state) {
+      return state.services;
     },
   },
   mutations: {
