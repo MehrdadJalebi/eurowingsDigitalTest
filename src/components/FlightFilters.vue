@@ -2,10 +2,18 @@
   <div class="filters">
     <div class="row">
       <div class="col-md-6 col-12">
-        <v-select :options="['Canada', 'United States']"></v-select>
+        <v-select
+          class="mb-2"
+          :options="['Canada', 'United States']"
+          :clearable="false">
+        </v-select>
       </div>
       <div class="col-md-6 col-12">
-        <input type="text" />
+        <v-select
+          class="mb-2"
+          :options="['Canada', 'United States']"
+          :clearable="false">
+        </v-select>
       </div>
     </div>
     <div class="row">
