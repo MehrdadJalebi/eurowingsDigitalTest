@@ -8,6 +8,6 @@ app.use(cors());
 app.get("/flights", (req, res) => {
   res.json(flights);
 });
-app.listen(3000, () => {
+app.listen(3001, () => {
   console.log("Server running on port 3000");
 });

@@ -1,1 +1,1 @@
-export const FlightsUrl = () => `http://localhost:3000/flights`;
+export const FlightsUrl = () => `http://localhost:3001/flights`;
